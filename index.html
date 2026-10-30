@@ -5,53 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="icon" href="imagens/modas_caridosas5.ico">
-    <title>Início</title>
+    <title>Início | Modas Caridosas</title>
 </head>
 <body>
     <header>
-        <p>Doe, Troque, Reutilize!</p>
+        <a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
 
-        <a href="index.html"><img src="imagens/modas_caridosas_logo.png" alt="Modas Caridosas"></a>
+        <p>Doe, Troque, Reutilize! Moda circular, acessível e inclusiva</p>
 
-        <form action="/pages/encontrar-roupas.html" name="pesquisar" role="search">
-            <label for="pesquisar">
-                <button type="submit">&#x1F50E;</button> <input type="search">
-            </label>
-        </form>
+        <div>
+            <a href="index.html"><img src="imagens/modas_caridosas_logo.png" alt="Modas Caridosas" width="350" height="220"></a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pages/encontrar-roupas.html">Encontrar Roupas</a></li>
-                <li><a href="pages/quero-doar.html">Quero Doar</a></li>
-                <li><a href="pages/acessibilidade.html">Acessibilidade e Inclusão</a></li>
-                <li><a href="pages/sustentabilidade.html">Sustentabilidade e Cultura</a></li>
-            </ul>
-        </nav>
+            <form action="pages/encontrar-roupas.html" role="search" method="get">
+                <label for="pesquisar" class="so-leitor">Buscar Roupas</label>
+                <input type="search" id="pesquisar" placeholder="Buscar roupas (ex: camisa, adulto)" name="q" autocomplete="off">
+                <button type="submit" aria-label="Buscar">&#x1F50E;</button>
+            </form>
 
-        <a href="pages/minha-conta.html">Minha Conta</a>
+            <a href="pages/minha-conta.html">
+                Minha Conta
+            </a>
+
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="pages/encontrar-roupas.html">Encontrar Roupas</a></li>
+                    <li><a href="pages/quero-doar.html">Quero Doar</a></li>
+                    <li><a href="pages/acessibilidade.html">Acessibilidade e Inclusão</a></li>
+                    <li><a href="pages/sustentabilidade.html">Sustentabilidade e Cultura</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main id="conteudo">
         <section aria-labelledby="hero-titulo">
-            <h1 id="hero-titulo">Moda circular, acessível e inclusiva</h1>
+            <div id="hero-texto">
+                <p>MODA CIRCULAR | ODS 12</p>
 
-            <p>Doe, troque e reutilize roupas em bom estado e dê nova vida às peças.</p>
+                <h1 id="hero-titulo">Moda circular, acessível e inclusiva</h1>
 
-            <a href="pages/encontrar-roupas.html">Encontrar 
-            Roupas</a>
+                <p>Doe, troque e reutilize roupas em bom estado e dê nova vida às peças.</p>
 
-            <a href="pages/quero-doar.html">Quero doar</a>
+                <div id="hero-acoes">
+                    <a href="pages/encontrar-roupas.html">Encontrar Roupas</a>
 
-            <figure>
-                <img src="" alt="">
+                    <a href="pages/quero-doar.html">Quero doar</a>
+                </div>
+            </div>
+
+            <figure id="hero-image">
+                <img src="imagens/modas_caridosas_logo.png" alt="Pessoas diversas escolhendo roupas em um varal de doações" width="1200" height="960" fetchpriority="high">
             </figure>
         </section>
 
         <section aria-labelledby="porque-reutilizar">
-            <h2 id="hero-porque">POR QUE REUTILIZAR?</h2>
+            <h2 id="hero-porque">Por que reutilizar?</h2>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, laborum debitis sint odit quo repellendus harum deserunt, facere ex amet sed cum pariatur suscipit. Dicta, possimus similique! Culpa, voluptates sint.</p>
+
+            <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank" rel="noopener noreferrer">ODS 12 | Meta 12.5</a>
 
             <ul>
                 <li>
@@ -70,7 +83,7 @@
         </section>
 
         <section aria-labelledby="como-funciona">
-            <h2>COMO FUNCIONA?</h2>
+            <h2 id="como-funciona">Como funciona?</h2>
 
             <section id="para-quem-procura">
                 <h3>PARA QUEM PROCURA</h3>
@@ -98,39 +111,35 @@
         </section>
 
         <section aria-labelledby="pecas-disponiveis">
-            <h2>PEÇAS DISPONÍVEIS</h2>
+            <h2 id="pecas-disponiveis">Peças disponíveis</h2>
 
             <ul>
                 <li>
                     <article>
-                        <img src="" alt="">
-                        <h3>Title 1</h3>
+                        <img src="imagens/modas_caridosas_logo.png" alt="Descrição da peça 1" width="560" height="700" loading="lazy">
+                        <h3><a href="pages/encontrar-roupas.html">Title 1</a></h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatem pariatur esse tempora eum ipsam accusantium rem placeat! Cupiditate explicabo error commodi aperiam quia corrupti neque laboriosam excepturi quae ipsam!</p>
-                        <a href=""></a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <img src="" alt="">
-                        <h3>Title 2</h3>
+                        <img src="imagens/modas_caridosas_logo.png" alt="Descrição da peça 2" width="560" height="700" loading="lazy">
+                        <h3><a href="pages/encontrar-roupas.html">Title 2</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ratione tempore dolor libero, soluta laboriosam eos nulla quasi, laudantium excepturi dicta expedita! Dolores tempore nihil, aliquid eligendi sunt aspernatur laboriosam?</p>
-                        <a href=""></a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <img src="" alt="">
-                        <h3>Title 3</h3>
+                        <img src="imagens/modas_caridosas_logo.png" alt="Descrição da peça 3" width="560" height="700" loading="lazy">
+                        <h3><a href="pages/encontrar-roupas.html">Title 3</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem, nesciunt modi deleniti molestias animi tempora. Nesciunt, ut incidunt inventore, quasi nulla, aliquam quo porro voluptates quis fugiat deleniti ab?</p>
-                        <a href=""></a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <img src="" alt="">
-                        <h3>Title 4</h3>
+                        <img src="imagens/modas_caridosas_logo.png" alt="Descrição da peça 4" width="560" height="700">
+                        <h3><a href="pages/encontrar-roupas.html">Title 4</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas suscipit consectetur similique perspiciatis. Molestias minima omnis nostrum quis sint facere unde dolore optio ad explicabo, et consequuntur dignissimos nobis fuga!</p>
-                        <a href=""></a>
                     </article>
                 </li>
             </ul>
@@ -139,91 +148,106 @@
         </section>
 
         <section aria-labelledby="moda-para-todas-pessoas">
-            <h2>Title</h2>
+            <h2 id="moda-para-todas-pessoas">Moda para todas as pessoas</h2>
             
             <figure>
-                <img src="" alt="">
+                <img src="imagens/modas_caridosas_logo.png" alt="Descrição da foto" width="1040" height="1040" loading="lazy">
             </figure>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perspiciatis necessitatibus inventore ducimus maxime, dolore ipsam facere expedita soluta fugit asperiores error eum totam culpa quidem sequi officia magni laborum?</p>
+
+            <ul>
+                <li>Facilidade para vestir</li>
+                <li>Tipos de fechos</li>
+                <li>Conforto</li>
+            </ul>
 
             <a href="pages/acessibilidade.html">Saiba mais</a>
         </section>
 
         <section aria-labelledby="sustentabilidade-cultura">
-            <h2>Title</h2>
+            <h2 id="sustentabilidade-cultura">Sustentabilidade e Cultura</h2>
 
-            <article>
-                <img src="" alt="">
-                <h3>Title 1</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga molestiae dolor ipsum. Autem minus voluptatem sint. Maiores amet, reprehenderit sint nulla illo dolores at eligendi sapiente, ipsum assumenda, cum dicta.</p>
-                <a href="">Link 1</a>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam necessitatibus sed eligendi corrupti possimus tempore expedita quidem ipsum dignissimos, odit error hic sint qui quae vitae perspiciatis impedit, explicabo iure.</p>
-                <a href="">Link 2</a>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title 3</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odit delectus debitis cumque voluptate libero odio aspernatur adipisci incidunt. Excepturi non nostrum nam dolore quaerat ducimus provident, cupiditate fugiat ipsa.</p>
-                <a href="">Link 3</a>
-            </article>
+            <ul>
+                <li>
+                    <article>
+                        <img src="imagens/modas_caridosas_logo.png" alt="" width="760" height="428" loading="lazy">
+                        <h3><a href="pages/sustentabilidade.html">Consumo consciente</a></h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga molestiae dolor ipsum. Autem minus voluptatem sint. Maiores amet, reprehenderit sint nulla illo dolores at eligendi sapiente, ipsum assumenda, cum dicta.</p>
+                        <a href="pages/sustentabilidade.html">Ler mais &rightarrow;</a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="imagens/modas_caridosas_logo.png" alt="" width="760" height="428" loading="lazy">
+                        <h3><a href="pages/sustentabilidade.html">Conservar e customizar</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam necessitatibus sed eligendi corrupti possimus tempore expedita quidem ipsum dignissimos, odit error hic sint qui quae vitae perspiciatis impedit, explicabo iure.</p>
+                        <a href="pages/sustentabilidade.html">Ler mais &rightarrow;</a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="imagens/modas_caridosas_logo.png" alt="" width="760" height="428">
+                        <h3><a href="pages/sustentabilidade.html">Cultura e moda</a></h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima odit delectus debitis cumque voluptate libero odio aspernatur adipisci incidunt. Excepturi non nostrum nam dolore quaerat ducimus provident, cupiditate fugiat ipsa.</p>
+                        <a href="pages/sustentabilidade.html">Ler mais &rightarrow;</a>
+                    </article>
+                </li>
+            </ul>
 
             <a href="pages/sustentabilidade.html">Ver todos os conteúdos</a>
         </section>
 
         <section aria-labelledby="faixa-final">
-            <h2>FAIXA FINAL</h2>
+            <h2 id="faixa-final">Tem roupas em bom estado?</h2>
 
             <a href="pages/quero-doar.html">Quero doar</a>
         </section>
     </main>
 
     <footer>
-        <section aria-labelledby="sobre-projeto">
+        <section>
             <h2>Sobre o projeto</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, maxime aperiam consequatur iure corporis sit nulla pariatur animi maiores. Incidunt beatae temporibus cum praesentium odio labore fuga sit dolorum. Rerum?</p>
         </section>
 
-        <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="pages/encontrar-roupas.html">Encontrar Roupas</a></li>
-                    <li><a href="pages/quero-doar.html">Quero Doar</a></li>
-                    <li><a href="pages/acessibilidade.html">Acessibilidade e Inclusão</a></li>
-                    <li><a href="pages/sustentabilidade.html">Sustentabilidade e Cultura</a></li>
-                    <li><a href="pages/minha-conta.html">Minha Conta</a></li>
-                </ul>
-            </nav>
+        <nav aria-label="Rodape">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pages/encontrar-roupas.html">Encontrar Roupas</a></li>
+                <li><a href="pages/quero-doar.html">Quero Doar</a></li>
+                <li><a href="pages/acessibilidade.html">Acessibilidade e Inclusão</a></li>
+                <li><a href="pages/sustentabilidade.html">Sustentabilidade e Cultura</a></li>
+                <li><a href="pages/minha-conta.html">Minha Conta</a></li>
+            </ul>
+        </nav>
 
-            <section aria-labelledby="ods-12_fontes">
-                <h2>ODS 12 e Fontes</h2>
+        <section aria-labelledby="ods-12_fontes">
+            <h2>ODS 12 e Fontes</h2>
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="https://brasil.un.org/pt-br/sdgs/12">ODS 12 (ONU)</a></li>
+                    <li><a href="https://www.icrc.org/pt">Comitê Internacional da Cruz Vermelha (CICV)</a></li>
+                    <li><a href="https://www.exercitodoacoes.org.br/">Exército de Doações</a></li>
                 </ul>
-            </section>
+        </section>
 
-            <section aria-labelledby="integrantes">
-                <h2>Integrantes do grupo</h2>
-                <ul>
-                    <li>Antônio Fernandes de Macêdo Neto</li>
-                    <li>Abner Lucas</li>
-                    <li>William Bier</li>
-                    <li>João Matheus</li>
-                    <li>Igor Rafael</li>
-                    <li>Ítalo</li>
-                </ul>
-                <p>Aviso: não é iniciativa oficial da ONU/CIV</p>
-            </section>
+        <section aria-labelledby="integrantes">
+            <h2>Integrantes do grupo</h2>
+            <ul>
+                <li>Antônio Fernandes de Macêdo Neto</li>
+                <li>Abner Lucas</li>
+                <li>William Bier da Silva</li>
+                <li>João Matheus</li>
+                <li>Igor Rafael</li>
+                <li>Ítalo</li>
+            </ul>
+        </section>
 
-            <small>
-                &copy; 2026 Modas Caridosas
-            </small>
+        <p>Aviso: não é iniciativa oficial da ONU/CICV</p>
+
+        <small>
+            &copy; 2026 Modas Caridosas
+        </small>
     </footer>
 </body>
 </html>
