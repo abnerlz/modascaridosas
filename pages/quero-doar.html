@@ -1,2 +1,42 @@
-Página com formulário para 
-cadastrar roupas para doação.
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/doacao.css">
+    <title>Quero Doar</title>
+</head>
+<body>
+    <h1>Quero Doar</h1>
+
+    <h2>Faça sua doação</h2>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+
+        <label for="roupa">Tipo de Roupa:</label>
+        <select id="roupa" name="roupa">
+            <option value="camisa">Camisa</option>
+            <option value="calca">Calça</option>
+            <option value="vestido">Vestido</option>
+            <option value="sapato">Sapato</option>
+            <option value="outro">Outro</option>
+        </select><br><br>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" required><br><br>
+
+        <input type="submit" value="Enviar Doação">
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Quero Doar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html> 
