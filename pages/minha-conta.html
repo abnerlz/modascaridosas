@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/geral.css">
     <link rel="stylesheet" href="../css/lyt.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/acessibilidade.css">
+    <script src="../js/acessibilidade.js" defer></script>
 </head>
 
 <body>
@@ -33,6 +35,34 @@
             </a>
 
         </div>
+
+
+<!-- BARRA DE ACESSIBILIDADE -->
+<div class="barra-acessibilidade" aria-label="Recursos de acessibilidade">
+
+    <span>Acessibilidade:</span>
+
+    <button type="button" id="diminuir-fonte"
+            aria-label="Diminuir tamanho do texto">
+        A−
+    </button>
+
+    <button type="button" id="aumentar-fonte"
+            aria-label="Aumentar tamanho do texto">
+        A+
+    </button>
+
+    <button type="button" id="alto-contraste"
+            aria-pressed="false">
+        Alto contraste
+    </button>
+
+    <button type="button" id="restaurar-acessibilidade">
+        Restaurar
+    </button>
+
+</div>
+
 
     </header>
 

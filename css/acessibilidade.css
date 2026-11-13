@@ -1,1 +1,67 @@
 /* abner
+
+
+/* Barra de acessibilidade */
+.barra-acessibilidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Botões */
+.barra-acessibilidade button {
+    padding: 6px 12px;
+    border: 1px solid #244D3A;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #244D3A;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.barra-acessibilidade button:hover {
+    background-color: #244D3A;
+    color: #FFFFFF;
+}
+
+/* Foco para navegação por teclado */
+.barra-acessibilidade button:focus-visible {
+    outline: 3px solid #B96F52;
+    outline-offset: 3px;
+}
+
+/* Modo de alto contraste */
+body.alto-contraste {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+body.alto-contraste header,
+body.alto-contraste main,
+body.alto-contraste footer,
+body.alto-contraste section,
+body.alto-contraste article {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+body.alto-contraste p,
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste li {
+    color: #FFFFFF;
+}
+
+body.alto-contraste a {
+    color: #FFFF00;
+}
+
+body.alto-contraste button {
+    background-color: #000000;
+    color: #FFFF00;
+    border: 2px solid #FFFFFF;
+}

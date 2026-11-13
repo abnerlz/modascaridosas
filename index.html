@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="icon" href="imagens/modas_caridosas5.ico" type="image/x-icon" sizes="any">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+    <script src="js/acessibilidade.js" defer></script>
     <title>Início | Modas Caridosas</title>
 </head>
 <body>
@@ -39,6 +41,34 @@
                 </ul>
             </nav>
         </div>
+
+
+<!-- BARRA DE ACESSIBILIDADE -->
+<div class="barra-acessibilidade" aria-label="Recursos de acessibilidade">
+
+    <span>Acessibilidade:</span>
+
+    <button type="button" id="diminuir-fonte"
+            aria-label="Diminuir tamanho do texto">
+        A−
+    </button>
+
+    <button type="button" id="aumentar-fonte"
+            aria-label="Aumentar tamanho do texto">
+        A+
+    </button>
+
+    <button type="button" id="alto-contraste"
+            aria-pressed="false">
+        Alto contraste
+    </button>
+
+    <button type="button" id="restaurar-acessibilidade">
+        Restaurar
+    </button>
+
+</div>
+
     </header>
 
     <main id="conteudo">
