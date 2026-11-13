@@ -4,8 +4,8 @@
 /* Barra de acessibilidade */
 .barra-acessibilidade {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
