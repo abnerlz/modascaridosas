@@ -19,78 +19,56 @@
 
     <!-- Cabeçalho -->
     <header>
-
-        <a href="#conteudo" class="pular-link">
-            Pular para o conteúdo
-        </a>
+        <a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
 
         <p>Doe, Troque, Reutilize! Moda circular, acessível e inclusiva</p>
 
         <div>
+            <a href="index.html"><img src="../imagens/modas_caridosas_logo.png" alt="Modas Caridosas" width="350" height="220"></a>
 
-            <a href="../index.html">
-                <img src="../imagens/modas_caridosas_logo.png"
-                     alt="Modas Caridosas"
-                     width="350"
-                     height="220">
-            </a>
+            <form action="pages/encontrar-roupas.html" role="search" method="get">
+                <label for="pesquisar" class="so-leitor">Buscar Roupas</label>
+                <input type="search" id="pesquisar" placeholder="Buscar roupas (ex: camisa, adulto)" name="q" autocomplete="off">
+                <button type="submit" aria-label="Buscar">&#x1F50E;</button>
+            </form>
 
-
-            <nav aria-label="Navegação principal">
+            <nav aria-label="Principal">
                 <ul>
-                    <li>
-                        <a href="../index.html">Início</a>
-                    </li>
-
-                    <li>
-                        <a href="encontrar-roupas.html">Encontrar Roupas</a>
-                    </li>
-
-                    <li>
-                        <a href="quero-doar.html">Quero Doar</a>
-                    </li>
-
-                    <li>
-                        <a href="acessibilidade.html">Acessibilidade e Inclusão</a>
-                    </li>
-
-                    <li>
-                        <a href="sustentabilidade.html" aria-current="page">
-                            Sustentabilidade e Cultura
-                        </a>
-                    </li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pages/encontrar-roupas.html">Encontrar Roupas</a></li>
+                    <li><a href="pages/quero-doar.html">Quero Doar</a></li>
+                    <li><a href="pages/acessibilidade.html">Acessibilidade e Inclusão</a></li>
+                    <li><a href="pages/sustentabilidade.html" aria-current="page">Sustentabilidade e Cultura</a></li>
                 </ul>
             </nav>
-
         </div>
 
+        <!-- BARRA DE ACESSIBILIDADE -->
 
-<!-- BARRA DE ACESSIBILIDADE -->
-<div class="barra-acessibilidade" aria-label="Recursos de acessibilidade">
+        <div class="barra-acessibilidade" aria-label="Recursos de acessibilidade">
 
-    <span>Acessibilidade:</span>
+        <span>Acessibilidade:</span>
 
-    <button type="button" id="diminuir-fonte"
+        <button type="button" id="diminuir-fonte"
             aria-label="Diminuir tamanho do texto">
-        A−
-    </button>
+            A−
+        </button>
 
-    <button type="button" id="aumentar-fonte"
+        <button type="button" id="aumentar-fonte"
             aria-label="Aumentar tamanho do texto">
-        A+
-    </button>
+            A+
+        </button>
 
-    <button type="button" id="alto-contraste"
+        <button type="button" id="alto-contraste"
             aria-pressed="false">
-        Alto contraste
-    </button>
+            Alto contraste
+        </button>
 
-    <button type="button" id="restaurar-acessibilidade">
-        Restaurar
-    </button>
+        <button type="button" id="restaurar-acessibilidade">
+            Restaurar
+        </button>
 
-</div>
-
+        </div>
 
     </header>
 
