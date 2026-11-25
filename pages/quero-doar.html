@@ -20,7 +20,7 @@
         <p>Doe, Troque, Reutilize! Moda circular, acessível e inclusiva</p>
 
         <div>
-            <a href="index.html"><img src="../imagens/modas_caridosas_logo.png" alt="Modas Caridosas" width="350" height="220"></a>
+            <a href="index.html"><img src="../imagens/logo/modas_caridosas_logo.png" alt="Modas Caridosas" width="350" height="220"></a>
 
             <form action="pages/encontrar-roupas.html" role="search" method="get">
                 <label for="pesquisar" class="so-leitor">Buscar Roupas</label>
@@ -84,7 +84,7 @@
                 que precisa. Doe com carinho e faça a diferença na vida de
                 famílias da sua comunidade.
             </p>
-            <img src="../img/doacao.jpg" alt="Voluntários organizando roupas doadas" width="400">
+            <img src="../imagens/pessoas/voluntarios-roupas.jpg" alt="Voluntários organizando roupas doadas" width="1280" height="853">
             <p><a href="#formulario"><strong>Quero doar agora</strong></a></p>
         </section>
 
@@ -109,11 +109,14 @@
 
         <section id="depoimentos">
             <h2>Quem já doou</h2>
-            <blockquote>
-                "Foi simples e rápido. Saber que minhas roupas vão ajudar
-                alguém me deixou muito feliz!"
-                <footer>— Maria, doadora</footer>
-            </blockquote>
+            <figure>
+                <img src="../imagens/pessoas/maria-doadora.jpg" alt="Doadora Maria" width="667" height="1000">
+                <blockquote>
+                    <p>"Foi simples e rápido. Saber que minhas roupas vão ajudar
+                    alguém me deixou muito feliz!"</p>
+                </blockquote>
+                <figcaption>- Maria, doadora</figcaption>
+            </figure>    
         </section>
 
         <section id="doacao">
@@ -123,7 +126,7 @@
                     <legend>Seus dados</legend>
                     <p>
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" title="Informe seu nome completo" pattern="[A-Za-zÀ-ÿ'\-]+(?: [A-Za-zÀ-ÿ'\-]+)+" required>
                     </p>
                     <p>
                         <label for="email">Email:</label>
@@ -131,7 +134,7 @@
                     </p>
                     <p>
                         <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(83) 99999-9999">
+                        <input type="tel" id="telefone" name="telefone" placeholder="(83) 99999-9999" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" title="Formato: (11) 99999-9999" required>
                     </p>
                 </fieldset>
 
@@ -160,7 +163,7 @@
                     </p>
                 </fieldset>
 
-                <input type="submit" value="Quero doar agora">
+                <button type="submit">Quero doar agora</button>
             </form>
         </section>
 
@@ -185,7 +188,7 @@
     <footer>
         <section>
             <h2>Sobre o projeto</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, maxime aperiam consequatur iure corporis sit nulla pariatur animi maiores. Incidunt beatae temporibus cum praesentium odio labore fuga sit dolorum. Rerum?</p>
+            <p>A Modas Caridosas é um projeto desenvolvido em grupo, alinhado ao Objetivo de Desenvolvimento Sustentável 12 da ONU (Consumo e Produção Responsáveis). Nosso propósito é incentivar a reutilização e a doação de roupas, reduzindo o desperdício têxtil e aproximando quem tem peças em bom estado de quem precisa delas.</p>
         </section>
 
         <nav aria-label="Rodape">
