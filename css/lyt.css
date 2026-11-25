@@ -1,2 +1,155 @@
-/* Cabeçalho, navegação, rodapé, organização geral e 
-responsividade compartilhada. */
+main {
+    width: min(calc(100% - (var(--mc-gutter) * 2)), var(--mc-container));
+    margin-inline: auto;
+}
+
+main > section {
+    margin-block: clamp(2.5rem, 5.5vw, 5rem);
+}
+
+main > section > h1,
+main > section > h2 {
+    max-width: 850px;
+}
+
+main > section > p {
+    max-width: 780px;
+}
+
+main > section > p:first-of-type {
+    line-height: 1.8;
+}
+
+main a:not([class]) {
+    font-weight: 600;
+}
+
+/* Links de ação */
+main a[href]:not([href^="#"]),
+main button[type="submit"],
+main button[type="button"] {
+    text-decoration: none;
+}
+
+main a[href*="quero-doar"],
+main a[href*="encontrar-roupas"],
+main a[href*="doar.html"],
+main a[href*="encontrar.html"] {
+    text-decoration: none;
+}
+
+/* Botões de formulário e ações do catálogo */
+main button,
+main input[type="submit"],
+main input[type="reset"] {
+    min-height: 46px;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid var(--mc-verde);
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    font-weight: 700;
+    line-height: 1.2;
+    transition: transform var(--mc-transicao), background-color var(--mc-transicao), box-shadow var(--mc-transicao);
+}
+
+main button:hover,
+main input[type="submit"]:hover,
+main input[type="reset"]:hover {
+    transform: translateY(-2px);
+    background: var(--mc-verde-escuro);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+main button[type="reset"] {
+    border-color: var(--mc-borda);
+    background: transparent;
+    color: var(--mc-grafite);
+}
+
+main button[type="reset"]:hover {
+    background: var(--mc-creme);
+}
+
+/* Campos compartilhados */
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.72rem 0.9rem;
+    border: 1px solid #CFCABD;
+    border-radius: var(--mc-raio-pequeno);
+    background: var(--mc-branco);
+    color: var(--mc-grafite);
+    outline: none;
+    transition: border-color var(--mc-transicao), box-shadow var(--mc-transicao);
+}
+
+main textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+main input:focus,
+main select:focus,
+main textarea:focus {
+    border-color: var(--mc-verde);
+    box-shadow: 0 0 0 3px rgba(36, 77, 58, 0.12);
+}
+
+main label {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    color: var(--mc-grafite);
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+/* Listas de conteúdo: remove o estilo padrão quando usadas como cards. */
+main > section > ul,
+main > section > ol {
+    padding-left: 1.35rem;
+}
+
+main figure {
+    margin: 0;
+}
+
+main img {
+    border-radius: var(--mc-raio-medio);
+}
+
+/* Cartões de conteúdo reutilizáveis */
+main article {
+    min-width: 0;
+}
+
+main article h3 {
+    margin-top: 0.6rem;
+}
+
+main article p {
+    font-size: 0.92rem;
+}
+
+/* Âncoras de seção não ficam escondidas sob o cabeçalho. */
+main [id] {
+    scroll-margin-top: 7rem;
+}
+
+@media (max-width: 900px) {
+    main {
+        width: min(calc(100% - 2rem), var(--mc-container));
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+        width: min(calc(100% - 1.25rem), var(--mc-container));
+    }
+
+    main > section {
+        margin-block: 2.5rem;
+    }
+}
