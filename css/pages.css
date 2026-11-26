@@ -1,0 +1,968 @@
+/* 1. PÁGINA INICIAL */
+
+/* Hero principal */
+main#conteudo:has(#hero-texto) > section:first-child {
+    width: calc(100% + (var(--mc-gutter) * 2));
+    margin-top: clamp(1.2rem, 3vw, 2.3rem);
+    margin-left: calc(var(--mc-gutter) * -1);
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-creme);
+}
+
+#hero-texto {
+    align-self: center;
+    padding: clamp(2rem, 5vw, 4.6rem);
+}
+
+#hero-texto > p:first-child,
+main#conteudo > section:first-child > p:first-of-type {
+    margin-bottom: 0.85rem;
+    color: var(--mc-terracota-escuro);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+#hero-texto h1 {
+    max-width: 620px;
+    margin-bottom: 1.15rem;
+    color: var(--mc-verde-escuro);
+    font-size: clamp(2.35rem, 4.6vw, 4.2rem);
+    line-height: 1.08;
+}
+
+#hero-texto > p:not(:first-child) {
+    max-width: 520px;
+    margin-bottom: 1.7rem;
+    color: #535A55;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+}
+
+#hero-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+#hero-acoes a,
+#faixa-final a,
+main#conteudo > section:nth-of-type(5) > a,
+main#conteudo > section:nth-of-type(4) > a {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.78rem 1.35rem;
+    border: 1px solid var(--mc-verde);
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#hero-acoes a:hover,
+#faixa-final a:hover,
+main#conteudo > section:nth-of-type(5) > a:hover,
+main#conteudo > section:nth-of-type(4) > a:hover {
+    transform: translateY(-2px);
+    background: var(--mc-verde-escuro);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+#hero-acoes a + a {
+    background: transparent;
+    color: var(--mc-verde);
+}
+
+#hero-acoes a + a:hover {
+    background: var(--mc-verde-claro);
+}
+
+#hero-image {
+    min-height: 470px;
+    height: 100%;
+}
+
+#hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 470px;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Por que reutilizar? */
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) {
+    padding: clamp(1.6rem, 4vw, 3rem);
+    border: 1px solid rgba(36, 77, 58, 0.08);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) > p {
+    max-width: 900px;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) > a {
+    display: inline-flex;
+    margin: 0.2rem 0 1.5rem;
+    color: var(--mc-terracota-escuro);
+    font-weight: 750;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) > ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) > ul li {
+    padding: 1.35rem;
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-verde-suave);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) h3 {
+    color: var(--mc-verde);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(2) li p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Como funciona? */
+main#conteudo:has(#hero-texto) > section:nth-of-type(3) > h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#para-quem-procura,
+#para-quem-doa {
+    padding: clamp(1.5rem, 3vw, 2.2rem);
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+}
+
+#para-quem-procura h3,
+#para-quem-doa h3 {
+    color: var(--mc-verde);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(3) > h2 {
+    grid-column: 1 / -1;
+}
+
+#para-quem-procura ol,
+#para-quem-doa ol {
+    display: grid;
+    gap: 0.7rem;
+    padding-left: 1.3rem;
+    color: var(--mc-texto-secundario);
+}
+
+#para-quem-procura > a,
+#para-quem-doa > a {
+    display: inline-flex;
+    margin-top: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Peças disponíveis na home */
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) > h2,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > h2 {
+    margin-bottom: 1.5rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) > ul,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul {
+    display: grid;
+    gap: 1.1rem;
+    padding: 0;
+    margin: 0 0 1.4rem;
+    list-style: none;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-branco);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article img,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Cards editoriais: imagem horizontal. Os produtos com corte vertical. */
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article img {
+    aspect-ratio: 4 / 4.7;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article img {
+    aspect-ratio: 16 / 10;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article h3,
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article p,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article h3,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article p {
+    margin-inline: 1rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article h3,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.55rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article h3 a,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article h3 a {
+    color: var(--mc-verde-escuro);
+    text-decoration: none;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) article p,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article p {
+    margin-bottom: 1.1rem;
+    font-size: 0.88rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(4) > a:last-child,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > a:last-child {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    text-decoration: none;
+}
+
+/* Moda para todas as pessoas */
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 0.5rem 2.5rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde-suave);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) h2 {
+    grid-column: 2;
+    margin: 0;
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) figure {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) p,
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) ul,
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) > a {
+    grid-column: 2;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(5) li {
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(36, 77, 58, 0.2);
+    border-radius: 999px;
+    color: var(--mc-verde);
+    font-size: 0.82rem;
+    font-weight: 650;
+}
+
+/* Chamada final */
+#faixa-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.6rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde);
+}
+
+#faixa-final h2 {
+    margin: 0;
+    color: var(--mc-creme);
+}
+
+#faixa-final a {
+    flex: 0 0 auto;
+    border-color: var(--mc-creme);
+    background: var(--mc-creme);
+    color: var(--mc-verde-escuro);
+}
+
+#faixa-final a:hover {
+    background: var(--mc-branco);
+}
+
+/* 2. PÁGINA ENCONTRAR ROUPAS */
+
+main#conteudo:has(#categoria) > section:first-child {
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde);
+    color: var(--mc-creme);
+}
+
+main#conteudo:has(#categoria) > section:first-child > p:first-child {
+    margin-bottom: 0.8rem;
+    color: #E9C2AE;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+main#conteudo:has(#categoria) > section:first-child h1 {
+    max-width: 760px;
+    color: var(--mc-creme);
+}
+
+main#conteudo:has(#categoria) > section:first-child > p:last-child {
+    max-width: 690px;
+    margin-bottom: 0;
+    color: rgba(251, 249, 244, 0.86);
+    font-size: 1.05rem;
+}
+
+/* Caixa de filtros */
+main#conteudo:has(#categoria) > section:nth-of-type(2) {
+    padding: clamp(1.4rem, 3vw, 2.3rem);
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(2) h2 {
+    margin-bottom: 1.3rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(2) form {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: end;
+    gap: 1rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(2) form > div {
+    min-width: 0;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(2) form > button {
+    grid-column: span 2;
+}
+
+/* Catálogo de peças */
+main#conteudo:has(#categoria) > section:nth-of-type(3) > h2 {
+    margin-bottom: 0.55rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) > p {
+    margin-bottom: 1.5rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) > ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) > ul > li {
+    min-width: 0;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-branco);
+    box-shadow: var(--mc-sombra-suave);
+    transition: transform var(--mc-transicao), box-shadow var(--mc-transicao);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--mc-sombra);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article img {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: cover;
+    border-radius: 0;
+    background: var(--mc-creme);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article h3 {
+    margin: 1.05rem 1rem 0.55rem;
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article p {
+    margin: 0 1rem 0.4rem;
+    color: var(--mc-texto-secundario);
+    font-size: 0.86rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(3) article button {
+    width: calc(100% - 2rem);
+    margin: auto 1rem 1rem;
+}
+
+/* Chamada pós-catálogo */
+main#conteudo:has(#categoria) > section:nth-of-type(4) {
+    padding: clamp(1.6rem, 4vw, 2.8rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-creme);
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(4) h2 {
+    margin-bottom: 0.55rem;
+}
+
+main#conteudo:has(#categoria) > section:nth-of-type(4) a {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    text-decoration: none;
+}
+
+/* 3. PÁGINAS INFORMATIVAS: ACESSIBILIDADE E SUSTENTABILIDADE */
+
+main#conteudo > section:first-child:has(> h1) {
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde);
+    color: var(--mc-creme);
+}
+
+main#conteudo > section:first-child:has(> h1) h1 {
+    max-width: 800px;
+    margin-bottom: 1rem;
+    color: var(--mc-creme);
+}
+
+main#conteudo > section:first-child:has(> h1) p {
+    max-width: 780px;
+    color: rgba(251, 249, 244, 0.86);
+    font-size: 1.04rem;
+}
+
+/* Sustentabilidade: introdução com imagem grande. */
+main#conteudo > section:first-child:has(> img) {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 1rem 2.5rem;
+}
+
+main#conteudo > section:first-child:has(> img) h1,
+main#conteudo > section:first-child:has(> img) p {
+    grid-column: 1;
+}
+
+main#conteudo > section:first-child:has(> img) h1 {
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo > section:first-child:has(> img) p {
+    margin-bottom: 0;
+}
+
+main#conteudo > section:first-child:has(> img) img {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+}
+
+/* Seções editoriais com leitura confortável. */
+main#conteudo > section:not(:first-child) {
+    padding: clamp(1.4rem, 3vw, 2.5rem);
+    border: 1px solid rgba(36, 77, 58, 0.1);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+}
+
+main#conteudo > section:not(:first-child) > h2 {
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo > section:has(> img):not(:first-child) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+    align-items: center;
+    gap: 1rem 2.2rem;
+}
+
+main#conteudo > section:has(> img):not(:first-child) h2,
+main#conteudo > section:has(> img):not(:first-child) p,
+main#conteudo > section:has(> img):not(:first-child) article {
+    grid-column: 1;
+}
+
+main#conteudo > section:has(> img):not(:first-child) > img {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+}
+
+/* Cards de métodos de reutilização e de adaptação inclusiva. */
+main#conteudo > section:has(> article) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+main#conteudo > section:has(> article) > h2,
+main#conteudo > section:has(> article) > p {
+    grid-column: 1 / -1;
+}
+
+main#conteudo > section:has(> article) > article {
+    padding: 1.25rem;
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-verde-suave);
+}
+
+main#conteudo > section:has(> article) > article h3 {
+    color: var(--mc-verde);
+}
+
+main#conteudo > section:has(> article) > article p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Listas informativas com marcadores elegantes. */
+main#conteudo > section > ul:not(:has(article)) {
+    padding-left: 1.25rem;
+}
+
+main#conteudo > section > ul:not(:has(article)) li {
+    margin-bottom: 0.5rem;
+    color: var(--mc-texto-secundario);
+}
+
+main#conteudo > section > ul:not(:has(article)) li::marker {
+    color: var(--mc-terracota);
+}
+
+/* CTAs nas páginas informativas */
+main#conteudo > section:last-child a,
+main#conteudo > section:has(> a + a) > a {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    margin: 0.35rem 0.5rem 0.35rem 0;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--mc-verde);
+    border-radius: 999px;
+    background: var(--mc-verde);
+    color: var(--mc-branco);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+main#conteudo > section:last-child a:hover,
+main#conteudo > section:has(> a + a) > a:hover {
+    background: var(--mc-verde-escuro);
+}
+
+main#conteudo > section:last-child {
+    background: var(--mc-creme);
+}
+
+@media (max-width: 1000px) {
+    main#conteudo:has(#hero-texto) > section:nth-of-type(4) > ul,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main#conteudo:has(#categoria) > section:nth-of-type(3) > ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main#conteudo:has(#categoria) > section:nth-of-type(2) form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    main#conteudo:has(#hero-texto) > section:first-child {
+        grid-template-columns: 1fr;
+    }
+
+    #hero-texto {
+        padding: 2rem 1.5rem;
+    }
+
+    #hero-image,
+    #hero-image img {
+        min-height: 300px;
+        max-height: 390px;
+    }
+
+    main#conteudo:has(#hero-texto) > section:nth-of-type(2) > ul {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) h2,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) figure,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) p,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) ul,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(5) > a {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    main#conteudo > section:first-child:has(> img),
+    main#conteudo > section:has(> img):not(:first-child) {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo > section:first-child:has(> img) img,
+    main#conteudo > section:has(> img):not(:first-child) > img {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 560px) {
+    main#conteudo:has(#hero-texto) > section:nth-of-type(3) {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo:has(#hero-texto) > section:nth-of-type(3) > h2 {
+        grid-column: 1;
+    }
+
+    main#conteudo:has(#hero-texto) > section:nth-of-type(4) > ul,
+    main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul,
+    main#conteudo:has(#categoria) > section:nth-of-type(3) > ul {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo:has(#categoria) > section:nth-of-type(2) form {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo:has(#categoria) > section:nth-of-type(2) form > button {
+        grid-column: auto;
+    }
+
+    main#conteudo > section:has(> article) {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo > section:has(> article) > h2,
+    main#conteudo > section:has(> article) > p {
+        grid-column: 1;
+    }
+
+    #faixa-final {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+main#conteudo > section:first-child:has(> h1):has(> img) {
+    background: var(--mc-creme);
+}
+
+main#conteudo > section:first-child:has(> h1):has(> img) h1 {
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo > section:first-child:has(> h1):has(> img) p {
+    color: var(--mc-texto-secundario);
+}
+
+main#conteudo > section:nth-of-type(3):has(> article):has(> img) > img {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    width: 100%;
+    max-height: 420px;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+}
+
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul {
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) > ul > li {
+    display: flex;
+    min-width: 0;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 100%;
+    padding-bottom: 1.1rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > h3,
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > p {
+    margin-inline: 1.1rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.55rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > p {
+    margin-bottom: 0.9rem;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > a:last-child {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    min-height: 38px;
+    margin: auto 1.1rem 0;
+    padding: 0.4rem 0.15rem;
+    border-radius: 6px;
+    color: var(--mc-verde-escuro);
+    font-weight: 750;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+main#conteudo:has(#hero-texto) > section:nth-of-type(6) article > a:last-child:hover {
+    color: var(--mc-terracota-escuro);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+main#conteudo > section:has(> h2#faixa-final) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: clamp(1.6rem, 4vw, 3rem);
+    border: 0;
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde);
+}
+
+main#conteudo > section:has(> h2#faixa-final) > #faixa-final {
+    display: block;
+    flex: 1 1 auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--mc-creme);
+    font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+}
+
+main#conteudo > section:has(> h2#faixa-final) > a {
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.3rem;
+    border: 1px solid var(--mc-creme);
+    border-radius: 999px;
+    background: var(--mc-creme);
+    color: var(--mc-verde-escuro);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+main#conteudo > section:has(> h2#faixa-final) > a:hover {
+    transform: translateY(-2px);
+    background: var(--mc-branco);
+}
+
+main#conteudo > section:has(> #segunda-vida) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.15rem;
+}
+
+main#conteudo > section:has(> #segunda-vida) > #segunda-vida,
+main#conteudo > section:has(> #segunda-vida) > p {
+    grid-column: 1 / -1;
+}
+
+main#conteudo > section:has(> #segunda-vida) > article {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-branco);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+main#conteudo > section:has(> #segunda-vida) > article > img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+main#conteudo > section:has(> #segunda-vida) > article h3 {
+    margin: 1.1rem 1.2rem 0.65rem;
+    color: var(--mc-verde-escuro);
+}
+
+main#conteudo > section:has(> #segunda-vida) > article p {
+    max-width: none;
+    flex: 1 1 auto;
+    margin: 0 1.2rem 1.2rem;
+    line-height: 1.7;
+}
+
+main#conteudo {
+    width: min(calc(100% - (var(--mc-gutter) * 2)), var(--mc-container));
+}
+
+@media (max-width: 1050px) {
+    main#conteudo > section:has(> #segunda-vida) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    main#conteudo > section:has(> #segunda-vida) {
+        grid-template-columns: 1fr;
+    }
+
+    main#conteudo > section:has(> #segunda-vida) > #segunda-vida,
+    main#conteudo > section:has(> #segunda-vida) > p,
+    main#conteudo > section:has(> #segunda-vida) > article,
+    main#conteudo > section:has(> #segunda-vida) > img {
+        grid-column: 1;
+    }
+
+    main#conteudo > section:has(> #segunda-vida) > img {
+        aspect-ratio: 16 / 9;
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    main#conteudo > section:has(> h2#faixa-final) {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    main#conteudo > section:has(> h2#faixa-final) > a {
+        align-self: flex-start;
+    }
+}
+
+
+@media (max-width: 900px) {
+    main#conteudo > section:has(> article):not(:has(> #segunda-vida)) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    main#conteudo > section:has(> article):not(:has(> #segunda-vida)) {
+        grid-template-columns: 1fr;
+    }
+}

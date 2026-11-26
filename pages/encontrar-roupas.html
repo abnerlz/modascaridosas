@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/geral.css">
     <link rel="stylesheet" href="../css/acessibilidade.css">
     <link rel="stylesheet" href="../css/lyt.css">
+    <link rel="stylesheet" href="../css/pages.css">
     <script src="../js/acessibilidade.js" defer></script>
     <title>Encontrar Roupas | Modas Caridosas</title>
 </head>
@@ -38,34 +39,39 @@
             </nav>
         </div>
 
+            <!-- BOTÃO FLUTUANTE E PAINEL DE ACESSIBILIDADE -->
+         
+            <button class="acessibilidade-toggle" id="abrir-acessibilidade" type="button" aria-controls="painel-acessibilidade" aria-expanded="false" aria-label="Abrir opções de acessibilidade">
+                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                    <circle cx="12" cy="4.5" r="2" fill="currentColor"></circle>
+                    <path d="M4.5 8.2h15M12 7.2v5.2m0 0-4.2 7.1M12 12.4l4.2 7.1M8 8.2l1 4.2m7-4.2-1 4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Acessibilidade</span>
+            </button>
 
+            <!-- PAINEL DE ACESSIBILIDADE -->
 
-<!-- BARRA DE ACESSIBILIDADE -->
-<div class="barra-acessibilidade" aria-label="Recursos de acessibilidade">
+            <div id="painel-acessibilidade" class="barra-acessibilidade" role="region" aria-label="Opções de acessibilidade" hidden>
+                <div class="painel-acessibilidade-cabecalho">
+                    <h2 id="titulo-painel-acessibilidade">Opções de acessibilidade</h2>
+                    <button class="acessibilidade-fechar" id="fechar-acessibilidade" type="button" aria-label="Fechar opções de acessibilidade">×</button>
+                </div>
 
-    <span>Acessibilidade:</span>
+                <div class="grupo-acessibilidade" role="group" aria-label="Ajuste do tamanho do texto">
+                    <span>Tamanho do texto</span>
+                    <div class="acoes-acessibilidade">
+                        <button aria-label="Diminuir tamanho do texto" id="diminuir-fonte" type="button">A−</button>
+                        <button aria-label="Aumentar tamanho do texto" id="aumentar-fonte" type="button">A+</button>
+                    </div>
+                </div>
 
-    <button type="button" id="diminuir-fonte"
-            aria-label="Diminuir tamanho do texto">
-        A−
-    </button>
+                <div class="grupo-acessibilidade" role="group" aria-label="Contraste e configurações">
+                    <button aria-pressed="false" id="alto-contraste" type="button">Alto contraste</button>
+                    <button id="restaurar-acessibilidade" type="button">Restaurar padrão</button>
+                </div>
 
-    <button type="button" id="aumentar-fonte"
-            aria-label="Aumentar tamanho do texto">
-        A+
-    </button>
-
-    <button type="button" id="alto-contraste"
-            aria-pressed="false">
-        Alto contraste
-    </button>
-
-    <button type="button" id="restaurar-acessibilidade">
-        Restaurar
-    </button>
-
-</div>
-
+                <p class="so-leitor" id="anuncio-acessibilidade" role="status" aria-live="polite" aria-atomic="true"></p>
+            </div>
     </header>
 
     <main id="conteudo">

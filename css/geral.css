@@ -20,8 +20,8 @@
     --mc-fonte-texto: "Inter", Arial, sans-serif;
 
     /* Ritmo e dimensões */
-    --mc-container: 1200px;
-    --mc-container-largo: 1320px;
+    --mc-container: 1360px;
+    --mc-container-largo: 1480px;
     --mc-gutter: clamp(1rem, 4vw, 2rem);
     --mc-raio-pequeno: 10px;
     --mc-raio-medio: 18px;
@@ -156,7 +156,7 @@ a:hover {
     color: var(--mc-branco);
 }
 
-/* Utilitários já usados no HTML */
+/* Utilitários */
 .so-leitor {
     position: absolute !important;
     width: 1px !important;
@@ -187,7 +187,7 @@ a:hover {
     transform: translateY(0);
 }
 
-/* Cabeçalho compartilhado — as páginas usam a mesma estrutura sem classes */
+/* Cabeçalho compartilhado */
 body > header {
     position: relative;
     z-index: 20;
@@ -206,7 +206,7 @@ body > header > p {
     text-align: center;
 }
 
-/* O título isolado existe apenas no cabeçalho da página de doação. */
+/* Título da página de doação */
 body > header > h1 {
     position: absolute;
     width: 1px;
@@ -412,5 +412,85 @@ body > footer > small {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* Responsividade estrutural do cabeçalho e rodapé. */
+@media (max-width: 1000px) {
+    body > footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-inline: var(--mc-gutter);
+    }
+}
+
+@media (max-width: 760px) {
+    body > header > div:not(.barra-acessibilidade) {
+        width: min(calc(100% - (var(--mc-gutter) * 2)), var(--mc-container-largo));
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        row-gap: 0.65rem;
+        padding-block: 0.9rem 1rem;
+    }
+
+    body > header > div:not(.barra-acessibilidade) > a:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        width: auto;
+    }
+
+    body > header > div:not(.barra-acessibilidade) > a:first-child img {
+        width: min(170px, 48vw);
+        max-height: 76px;
+    }
+
+    body > header > div:not(.barra-acessibilidade) > form[role="search"] {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+        width: min(100%, 480px);
+    }
+
+    body > header > div:not(.barra-acessibilidade) > nav {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+    }
+
+    body > header > div:not(.barra-acessibilidade) > nav ul {
+        justify-content: center;
+        gap: 0.15rem 0.8rem;
+    }
+
+    body > header > div:not(.barra-acessibilidade) > nav a {
+        min-height: 36px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body > footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.7rem;
+        padding: 2.5rem var(--mc-gutter) 2rem;
+    }
+
+    body > footer > p,
+    body > footer > small {
+        grid-column: 1;
+    }
+
+    body > header > p {
+        font-size: 0.7rem;
+        letter-spacing: 0.015em;
+    }
+
+    body > header > nav:not([aria-label]) {
+        padding-inline: var(--mc-gutter);
+        gap: 0.35rem 0.75rem;
+        font-size: 0.78rem;
     }
 }

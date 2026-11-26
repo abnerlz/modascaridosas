@@ -1,0 +1,302 @@
+main:has(#por-que-doar) {
+    width: min(calc(100% - (var(--mc-gutter) * 2)), var(--mc-container));
+}
+
+/* Hero de doação */
+#por-que-doar {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 1rem 2.6rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-verde);
+}
+
+#por-que-doar h2 {
+    grid-column: 1;
+    margin-bottom: 0.3rem;
+    color: var(--mc-creme);
+    font-size: clamp(2rem, 3.8vw, 3.3rem);
+}
+
+#por-que-doar > p:first-of-type {
+    grid-column: 1;
+    margin-bottom: 0.6rem;
+    color: rgba(251, 249, 244, 0.86);
+    font-size: 1.04rem;
+}
+
+#por-que-doar > img {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: var(--mc-raio-medio);
+}
+
+#por-que-doar > p:last-child {
+    grid-column: 1;
+    margin: 0;
+}
+
+#por-que-doar > p:last-child a {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.35rem;
+    border: 1px solid var(--mc-creme);
+    border-radius: 999px;
+    background: var(--mc-creme);
+    color: var(--mc-verde-escuro);
+    text-decoration: none;
+    font-weight: 750;
+}
+
+#por-que-doar > p:last-child a:hover {
+    background: var(--mc-branco);
+    transform: translateY(-2px);
+}
+
+/* Como funciona — etapas numeradas */
+#como-funciona > h2,
+#impacto > h2,
+#depoimentos > h2,
+#doacao > h2,
+#duvidas > h2 {
+    margin-bottom: 1.4rem;
+    color: var(--mc-verde-escuro);
+}
+
+#como-funciona > ol {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: etapas-doacao;
+}
+
+#como-funciona > ol > li {
+    min-height: 150px;
+    padding: 1.3rem;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-branco);
+    color: var(--mc-texto-secundario);
+    counter-increment: etapas-doacao;
+}
+
+#como-funciona > ol > li::before {
+    content: "0" counter(etapas-doacao);
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--mc-terracota-escuro);
+    font-family: var(--mc-fonte-titulo);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Indicadores de impacto */
+#impacto {
+    padding: clamp(1.7rem, 4vw, 3rem);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-creme);
+}
+
+#impacto > ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#impacto > ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    min-height: 130px;
+    padding: 1rem;
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-branco);
+    color: var(--mc-texto-secundario);
+    text-align: center;
+}
+
+#impacto > ul strong {
+    color: var(--mc-verde);
+    font-family: var(--mc-fonte-titulo);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.1;
+}
+
+/* Depoimento */
+#depoimentos > figure {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.4rem 1.7rem;
+    max-width: 850px;
+    padding: 1.4rem;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+}
+
+#depoimentos img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#depoimentos blockquote {
+    margin: 0;
+}
+
+#depoimentos blockquote p {
+    margin: 0;
+    color: var(--mc-grafite);
+    font-family: var(--mc-fonte-titulo);
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+#depoimentos figcaption {
+    color: var(--mc-texto-secundario);
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+/* Formulário de doação */
+#doacao {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-grande);
+    background: var(--mc-branco);
+    box-shadow: var(--mc-sombra-suave);
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+#formulario fieldset {
+    min-width: 0;
+    padding: 1.3rem;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-medio);
+    background: var(--mc-creme-claro);
+}
+
+#formulario legend {
+    padding: 0 0.45rem;
+    color: var(--mc-verde);
+    font-family: var(--mc-fonte-titulo);
+    font-weight: 700;
+}
+
+#formulario fieldset p {
+    margin-bottom: 1rem;
+}
+
+#formulario fieldset p:last-child {
+    margin-bottom: 0;
+}
+
+#formulario label {
+    display: block;
+}
+
+#formulario > button[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: start;
+    min-width: 210px;
+}
+
+/* Dúvidas frequentes */
+#duvidas details {
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--mc-borda);
+    border-radius: var(--mc-raio-pequeno);
+    background: var(--mc-branco);
+}
+
+#duvidas summary {
+    color: var(--mc-verde-escuro);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#duvidas details p {
+    margin: 0.8rem 0 0;
+}
+
+#duvidas details[open] {
+    border-color: rgba(36, 77, 58, 0.45);
+}
+
+@media (max-width: 900px) {
+    #como-funciona > ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    #por-que-doar {
+        grid-template-columns: 1fr;
+    }
+
+    #por-que-doar h2,
+    #por-que-doar > p:first-of-type,
+    #por-que-doar > img,
+    #por-que-doar > p:last-child {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #por-que-doar > img {
+        aspect-ratio: 16 / 10;
+    }
+
+    #formulario {
+        grid-template-columns: 1fr;
+    }
+
+    #formulario > button[type="submit"] {
+        grid-column: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    #como-funciona > ol,
+    #impacto > ul {
+        grid-template-columns: 1fr;
+    }
+
+    #depoimentos > figure {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #depoimentos img {
+        grid-column: 1;
+        grid-row: auto;
+        width: 120px;
+        margin-inline: auto;
+    }
+}
